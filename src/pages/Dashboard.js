@@ -169,9 +169,9 @@ const Dashboard = () => {
 
       <div className="dashboard-content">
         <div className="quick-actions">
-          <button className="action-btn primary" onClick={() => navigate('/search')}>
+          {/* <button className="action-btn primary" onClick={() => navigate('/vendor-discovery')}>
             🔍 New Vendor Search
-          </button>
+          </button> */}
           <button className="action-btn secondary" onClick={fetchEnquiries}>🔄 Refresh</button>
         </div>
 
