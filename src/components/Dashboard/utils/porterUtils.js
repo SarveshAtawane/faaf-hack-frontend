@@ -49,7 +49,7 @@ export const fetchPorterQuote = async (
     }
     
     // Use POST method instead of GET
-    const response = await fetch('http://localhost:8000/api/get-quote', {
+    const response = await fetch('https://faaf-hack-backend.onrender.com/api/get-quote', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

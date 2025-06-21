@@ -88,7 +88,7 @@ const VendorItem = ({
   // Updated function to call the FastAPI backend (pickup only)
   const callPorterOrderAPI = async (orderData) => {
     try {
-      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://faaf-hack-backend.onrender.com/';
       const response = await fetch(`${API_BASE_URL}/api/create_porter_order`, {
         method: 'POST',
         headers: {

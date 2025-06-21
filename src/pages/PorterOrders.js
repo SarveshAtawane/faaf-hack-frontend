@@ -9,7 +9,7 @@ const PorterOrders = () => {
   const fetchPorterOrders = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8000/api/get_all_porter_orders');
+      const response = await fetch('https://faaf-hack-backend.onrender.com/api/get_all_porter_orders');
       if (!response.ok) throw new Error('Failed to fetch Porter orders');
       const data = await response.json();
       if (data.success) {

@@ -24,7 +24,7 @@ const VendorDiscovery = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:8000/search', { query, location });
+      const res = await axios.post('https://faaf-hack-backend.onrender.com/search', { query, location });
       setResults(res.data.results);
       console.log('Search results:', res.data.results);
     } catch (err) {
@@ -51,7 +51,7 @@ const VendorDiscovery = () => {
     console.log('Additional details:', additionalDetails);
     
     try {
-      const res = await axios.post('http://localhost:8000/enquire', {
+      const res = await axios.post('https://faaf-hack-backend.onrender.com/enquire', {
         product: query,
         vendors: selectedVendors,
         location: location,

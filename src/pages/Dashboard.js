@@ -70,7 +70,7 @@ const Dashboard = () => {
   const fetchEnquiries = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8000/enquiries');
+      const response = await fetch('https://faaf-hack-backend.onrender.com/enquiries');
       if (!response.ok) throw new Error('Failed to fetch enquiries');
       const data = await response.json();
 
@@ -120,7 +120,7 @@ const Dashboard = () => {
 
   const saveVendorChanges = async () => {
     try {
-      const res = await fetch('http://localhost:8000/patch_vendor_data', {
+      const res = await fetch('https://faaf-hack-backend.onrender.com/patch_vendor_data', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
